@@ -44,28 +44,58 @@
         <div class="container mx-auto px-4 flex justify-between items-center">
             <a href="#" class="text-2xl font-bold text-brand-blue">FlowEvents</a>
             <nav class="hidden md:flex space-x-6">
+                <a href="#eventos" class="text-slate-700 hover:text-brand-blue font-medium">Eventos</a>
                 <a href="#servicos" class="text-slate-700 hover:text-brand-blue font-medium">Funcionalidades</a>
                 <!-- <a href="#sobre" class="text-slate-700 hover:text-brand-blue font-medium">Testemunhos</a> -->
                 <a href="#contacto" class="text-slate-700 hover:text-brand-blue font-medium">Contacto</a>
             </nav>
             <a href="https://app.flowevents.app" target="_blank" class="bg-brand-orange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg transition-colors hidden md:block">
-                Aceder ao Painel
+                Painel do Organizaor
             </a>
             <button class="md:hidden text-slate-700 focus:outline-none" id="mobile-menu-button">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
         <div id="mobile-menu" class="hidden md:hidden bg-white px-4 pt-2 pb-4 space-y-2 border-t border-slate-200">
+            <a href="#eventos" class="text-slate-700 hover:text-brand-blue font-medium">Eventos</a>
             <a href="#servicos" class="block text-slate-700 hover:text-brand-blue font-medium">Funcionalidades</a>
             <!-- <a href="#sobre" class="block text-slate-700 hover:text-brand-blue font-medium">Testemunhos</a> -->
             <a href="#contacto" class="block text-slate-700 hover:text-brand-blue font-medium">Contacto</a>
             <a href="https://app.flowevents.app" target="_blank" class="block bg-brand-orange hover:bg-orange-600 text-white font-bold py-2 px-4 rounded-lg text-center mt-2">
-                Aceder ao Painel
+                Painel do Organizaor
             </a>
         </div>
     </header>
 
-    <section class="bg-brand-blue text-white py-20 md:py-32 relative overflow-hidden">
+    <section id="eventos" class="w-full h-[80vh] bg-white border-b border-slate-200 relative">
+            <iframe 
+                src="https://app.flowevents.app/calendar" 
+                title="FlowEvents App"
+                class="w-full h-full border-0 block"
+                allow="clipboard-read; clipboard-write; geolocation"
+                loading="eager">
+            </iframe>
+        </section>
+
+        <!-- SECÇÃO: CALL TO ACTION (Transição) -->
+        <div class="bg-slate-900 text-white py-16 px-4 text-center relative z-10">
+            <div class="max-w-3xl mx-auto space-y-6">
+                <h2 class="text-2xl md:text-3xl font-bold">Gostaria de saber mais ou vender bilhetes para o seu evento aqui?</h2>
+                <p class="text-slate-300 text-lg">
+                    A FlowEvents simplifica a organização, a venda de bilhetes via WhatsApp e o controlo de acesso.
+                </p>
+                <div class="pt-4">
+                    <button onclick="document.getElementById('info-section').scrollIntoView({ behavior: 'smooth' });" 
+                       class="inline-flex items-center gap-2 bg-white text-slate-900 hover:bg-brand-orange hover:text-white font-bold py-3 px-8 rounded-full transition-all transform hover:scale-105 shadow-lg">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+                        Saber mais sobre a FlowEvents
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="info-section" class="bg-brand-blue text-white py-20 md:py-32 relative overflow-hidden">
         <div class="container mx-auto px-4 text-center relative z-10">
             <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
                 Gestão Inteligente para os Seus Eventos
@@ -131,12 +161,7 @@
                     </p>
                 </div>
             </div>
-            <!-- Secção Concierge removida
-            <div class="mt-12 bg-blue-50 border-l-4 border-brand-blue p-4 rounded-md text-left max-w-3xl mx-auto">
-                 <h4 class="font-semibold text-brand-blue">Serviço Concierge</h4>
-                 <p class="text-slate-700 mt-1">Nesta fase inicial, a nossa equipa trata do registo e gestão do seu evento na plataforma por si, garantindo um acompanhamento personalizado.</p>
-            </div>
-            -->
+
         </div>
     </section>
 
@@ -146,7 +171,7 @@
     </section>
     -->
 
-    <!-- Seção de Testemunhos Comentada
+    <!--Seção de Testemunhos Comentada -->
     <section id="sobre" class="py-16 md:py-24 bg-white">
         <div class="container mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-brand-darktext">O Que Dizem os Nossos Primeiros Clientes</h2>
@@ -156,16 +181,12 @@
             <div class="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="bg-slate-50 p-6 rounded-lg shadow-md text-left">
                     <p class="text-xl italic text-slate-700">"A FlowEvents revolucionou a forma como organizamos os nossos eventos. Tudo mais simples e eficiente!"</p>
-                    <p class="mt-4 font-semibold text-brand-darktext">- Ana Clara, Organizadora de Festivais</p>
-                </div>
-                <div class="bg-slate-50 p-6 rounded-lg shadow-md text-left">
-                    <p class="text-xl italic text-slate-700">"Nunca foi tão fácil gerir os bilhetes e o check-in. Recomendo vivamente a plataforma!"</p>
-                    <p class="mt-4 font-semibold text-brand-darktext">- João Silva, Promotor de Concertos</p>
+                    <p class="mt-4 font-semibold text-brand-darktext">- FHMgroup, Organizador de Eventos</p>
                 </div>
             </div>
         </div>
     </section>
-    -->
+    
 
 
     <section class="bg-brand-orange text-white py-16 md:py-20 text-center">
